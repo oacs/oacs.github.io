@@ -1,15 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import RssBadge from "../components/RssBadge.astro";
-import LinkedinIcon from "../assets/iconmonstr-linkedin-3.svg";
-import GmailIcon from "../assets/gmail.svg";
+import LinkedinIcon from "../assets/linkedin-logo.svg";
+import GmailIcon from "../assets/gmail-logo.svg";
+import WipIcon from "../assets/wip.svg";
 ---
 
 <Layout title="Welcome to Astro.">
   <main class="m-auto max-w-[80ch] p-5">
-    <h1 class="m-0 text-5xl font-extrabold text-white">
+    <h1 class="m-0 mb-4 text-5xl font-extrabold text-white">
       Welcome to <span class="text-gradient">OACS</span>.github Page
     </h1>
+    <div
+      class="flex h-24 flex-row items-center rounded-md border-t-8 border-t-yellow-500 bg-yellow-100 p-3 md:h-20"
+    >
+      <div
+        class="flex h-fit w-fit items-center rounded-full border-4 border-yellow-300 bg-yellow-200"
+      >
+        <img
+          src={WipIcon}
+          class="md:w relative bottom-[0.1rem] m-2 w-14 md:w-6 lg:m-1"
+          alt="Warning Sign"
+          srcset=""
+        />
+      </div>
+      <div class="px-4">
+        <h3 class="text-l pb-1 font-bold text-yellow-800">Work in progress</h3>
+        <p class="text-sm font-bold text-yellow-600">
+          This page is under construction, don't worry it will be over soon!
+        </p>
+      </div>
+    </div>
     <h2 class="text-4xl font-extrabold text-white">
       If you want to reach out:
     </h2>
@@ -17,7 +38,7 @@ import GmailIcon from "../assets/gmail.svg";
       <RssBadge
         url="https://oacs.github.io"
         profileImg="/assets/oacs.png"
-        logoImg="/assets/github-mark-white.svg"
+        logoImg="/assets/github-logo.svg"
         color="slate"
       >
         <span class="font-mono text-3xl font-bold text-white">OACS</span>

@@ -23,9 +23,9 @@ const { url, logoImg, profileImg, color } = Astro.props;
   >
     <img class="h-12 w-12 opacity-70 group-hover:opacity-90" src={logoImg} />
     <span class="base mx-auto hidden md:block"><slot /></span>
-    <im
+    <img
       src={profileImg}
       class="animate hidden h-12 w-12 rounded-full object-cover opacity-0 shadow-lg duration-150 ease-in group-hover:opacity-100 lg:block"
-    ></im>
-  </a>
+    /></a
+  >
 </div>
