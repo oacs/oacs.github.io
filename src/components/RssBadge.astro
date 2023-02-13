@@ -1,0 +1,31 @@
+---
+import clsx from "clsx";
+export interface Props {
+  logoImg: string;
+  profileImg: string;
+  url: string;
+  color: "slate" | "red" | "sky";
+}
+
+const { url, logoImg, profileImg, color = "slate" } = Astro.props;
+---
+
+<div
+  class={clsx("group w-full cursor-pointer rounded-lg transition-all", {
+    "bg-slate-500 hover:bg-slate-600": color === "slate",
+    "bg-red-500 hover:bg-red-600": color === "red",
+    "bg-sky-500 hover:bg-sky-600": color === "sky",
+  })}
+>
+  <a
+    href={url}
+    class="border-1 flex h-full flex-row items-center justify-center border-transparent p-2"
+  >
+    <img class="h-12 w-12 opacity-70 group-hover:opacity-90" src={logoImg} />
+    <span class="base mx-auto hidden md:block"><slot /></span>
+    <img
+      src={profileImg}
+      class="animate hidden h-12 w-12 rounded-full object-cover opacity-0 shadow-lg duration-150 ease-in group-hover:opacity-100 lg:block"
+    /></a
+  >
+</div>
