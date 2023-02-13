@@ -4,10 +4,10 @@ export interface Props {
   logoImg: string;
   profileImg: string;
   url: string;
-  color: string;
+  color: "slate" | "red" | "sky";
 }
 
-const { url, logoImg, profileImg, color } = Astro.props;
+const { url, logoImg, profileImg, color = "slate" } = Astro.props;
 ---
 
 <div
